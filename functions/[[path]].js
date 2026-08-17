@@ -13,7 +13,7 @@ function isEnPrefixed(pathname) {
 
 function isStaticAsset(pathname) {
   if (pathname.startsWith('/_next/') || pathname.startsWith('/api/') || pathname.startsWith('/images/') || pathname.startsWith('/ads/')) return true;
-  if (pathname.startsWith('/favicon') || pathname.startsWith('/cfdaf980934aefcda7e951d040c8fc11')) return true;
+  if (pathname.startsWith('/favicon') || pathname.startsWith('/a582438ba417a08b0fb7ee247ae3dec0')) return true;
   return /\.(js|css|json|xml|txt|webp|png|jpg|jpeg|svg|ico|woff2?|ttf|map)$/i.test(pathname);
 }
 

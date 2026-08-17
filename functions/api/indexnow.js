@@ -1,4 +1,4 @@
-const INDEXNOW_KEY = 'cfdaf980934aefcda7e951d040c8fc11';
+const INDEXNOW_KEY = 'a582438ba417a08b0fb7ee247ae3dec0';
 const HOST = 'breathedge2.wiki';
 const SEARCH_ENGINES = [
   'https://www.bing.com/indexnow',

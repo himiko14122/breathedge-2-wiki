@@ -46,8 +46,8 @@ async function fetchWithIndexFallback(request, env) {
 }
 
 // ---- /api/indexnow (migrated from functions/api/indexnow.js) ----
-// IndexNow key committed at D7-5: c719147a1b0dab70d60183844a8dd218
-const INDEXNOW_KEY = 'cfdaf980934aefcda7e951d040c8fc11';
+// IndexNow key rotated at D7-5b (project-specific, no template residue): a582438ba417a08b0fb7ee247ae3dec0
+const INDEXNOW_KEY = 'a582438ba417a08b0fb7ee247ae3dec0';
 const HOST = 'breathedge2.wiki';
 const SEARCH_ENGINES = [
   'https://www.bing.com/indexnow',
