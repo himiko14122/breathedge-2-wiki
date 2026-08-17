@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="visorGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#2a6f9e"/>
+      <stop offset="1" stop-color="#4a9ec6"/>
+    </linearGradient>
+    <linearGradient id="helmetGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#142038"/>
+      <stop offset="1" stop-color="#0b1226"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Astronaut helmet silhouette, straight-on, slightly tilted -->
+  <g transform="translate(256 262) rotate(-4)">
+    <!-- Main helmet body -->
+    <path d="M-150 -40 Q-150 -150 -20 -160 L20 -160 Q150 -150 150 -40 L150 10 Q150 150 -10 160 L10 160 Q-150 150 -150 10 Z"
+          fill="url(#helmetGrad)" stroke="#f5efe6" stroke-width="14" stroke-linejoin="round"/>
+    <!-- Helmet shoulder base -->
+    <path d="M-160 60 L160 60 L185 130 Q0 195 -185 130 Z"
+          fill="url(#helmetGrad)" stroke="#f5efe6" stroke-width="14" stroke-linejoin="round"/>
+    <!-- Rounded visor -->
+    <ellipse cx="0" cy="-20" rx="108" ry="92" fill="url(#visorGrad)" stroke="#f5efe6" stroke-width="12"/>
+    <!-- Visor glare -->
+    <path d="M-62 -74 Q-20 -110 30 -92 Q0 -74 -34 -66 Z" fill="#dceef7" opacity="0.45"/>
+    <!-- Neck ring -->
+    <path d="M-120 92 L120 92 L110 132 L-110 132 Z" fill="none" stroke="#f5efe6" stroke-width="10" stroke-linecap="round"/>
+  </g>
+
+  <!-- Golden feather tucked behind helmet right side -->
+  <g transform="translate(190 96) rotate(38)">
+    <path d="M0 0 L46 34 Q66 44 70 26 Q64 34 44 30 L8 -4 Z"
+          fill="#f0a030" stroke="#f5efe6" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M12 8 L42 26" stroke="#c87e1a" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <!-- Amber star, upper-left -->
+  <g transform="translate(128 118)">
+    <path d="M0 -34 L10 -11 L34 -11 L15 4 L22 28 L0 14 L-22 28 L-15 4 L-34 -11 L-10 -11 Z"
+          fill="#f08020" stroke="#f5efe6" stroke-width="6" stroke-linejoin="round"/>
+  </g>
+</svg>

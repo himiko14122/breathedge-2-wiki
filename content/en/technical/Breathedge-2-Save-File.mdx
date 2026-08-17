@@ -1,0 +1,155 @@
+export const metadata = {
+    id: "breathedge-2-save-file",
+    slug: "breathedge-2-save-file",
+    order: 6,
+    difficulty: "beginner",
+    title: "Breathedge 2 save file: Steam Cloud and save locations",
+    description: "Locate the Breathedge 2 save file and rely on Steam Cloud backups. We explain where saves live, how autosave works, and how to keep progress safe.",
+    keywords: ["breathedge 2 save file", "breathedge 2 save location", "breathedge 2 how to save", "breathedge 2 steam cloud", "breathedge 2 steam achievements", "breathedge 2 language settings", "breathedge 2 language support"],
+    image: "/images/technical/8r1Jdq870LA.webp",
+    video: "8r1Jdq870LA",
+    category: "technical",
+    date: "2026-08-17",
+    lastModified: "2026-08-17"
+}
+
+
+
+Losing a 12-hour run because you could not figure out where the Breathedge 2 save file lives is a uniquely frustrating way to end a space survival session. The early access build uses a combination of local saves, **Steam Cloud**, and checkpoint-based autosaves that are not always obvious during your first orbit around the wreckage. Knowing exactly how the system behaves means you can back up progress manually, transfer saves between machines, or recover after a crash without replaying the entire first chapter.
+
+## How Breathedge 2 Save Files Actually Work
+
+Breathedge 2 does not offer a manual quick-save button that you can hammer before every risky repair. Instead, the game triggers **autosave checkpoints** when you complete objectives, enter new zones, or finish dialogue sequences, which means your progress is tied to narrative and environmental triggers rather than a timer. The official [Breathedge 2 Steam store page](https://store.steampowered.com/app/2412960/Breathedge_2/) confirms that **Steam Cloud** is enabled for the title, so your local files are synchronized automatically when you close the game while connected to the internet.
+
+Because the early access build is structured around the first major story chapter and a large explorable area, the save system prioritizes **stability over granularity**. You will not find a save slot menu on the main screen, and the game does not ask you to name your progress. That design choice reduces the chance of corrupted manual saves, but it also means you should understand the exact file structure before attempting any manual backup or transfer.
+
+### Where the Local Save Directory Lives
+
+The default **Breathedge 2 save location** depends on your operating system, but Steam users on Windows can typically find their data in the following path: `C:\Users\[YourUsername]\AppData\Local\Breathedge2\Saved\SaveGames`. This directory stores your autosave slots, manual save files, and checkpoint data — meaning if you plan to back up progress before a risky spacewalk or before tinkering with **language settings**, copying the entire `SaveGames` folder is the safest move. Players who switch between Steam Cloud sync and local backups often keep a second copy here to avoid losing oxygen-timer-sensitive saves.
+
+| Platform | Default Save Path | Cloud Sync |
+|----------|-------------------|------------|
+| Windows (Steam) | `C:\Users\[YourName]\AppData\LocalLow\RedRuins Softworks\Breathedge 2\` | Yes, via Steam Cloud |
+| Windows (Steam Play/Proton) | `~/.steam/steam/steamapps/compatdata/2412960/pfx/` | Yes, if Proton Cloud is active |
+| Steam Deck | Same Proton path under compatdata 2412960 | Yes, via Steam Cloud |
+
+The folder name includes the developer **RedRuins Softworks**, so it is relatively easy to spot inside the standard Unity persistence directory. Within that folder, you will find `.save` or `.dat` files alongside a manifest that tracks your **Steam achievements** progress, because the game unlocks those locally before syncing them to Valve's servers.
+
+### What Triggers an Autosave
+
+Understanding the autosave cadence helps you avoid quitting at a moment when your last checkpoint is further behind than you expect. Community testing on the early access build suggests the following triggers are reliable across most hardware configurations: entering a new module or transitioning through an airlock consistently forces a write to your save file, as does crafting an item at a workbench or picking up a blueprint. Notably, the game does not autosave immediately after collecting basic resources like metal or wire, so players who spend ten minutes vacuuming debris in open space without crossing a module boundary can lose all that progress if they exit to the main menu too quickly — a common frustration in the first hours of a run.
+
+- **Objective completion** after turning in a main story quest or a side task from an NPC.
+
+- **Zone transitions** when you travel between major space sectors or enter a planetary surface area.
+
+- **Dialogue exits** after finishing a conversation with a crew member or story character.
+
+- **Crafting milestones** when you build a new tool, suit upgrade, or ship component.
+
+- **Death and respawn** immediately before the penalty is applied, so you do not lose materials twice.
+
+These triggers mean the game is constantly updating your Breathedge 2 save file in the background, but the exact moment of the write is not displayed on screen. If you alt-tab out and force-quit during a loading screen, there is a small chance the most recent autosave did not complete, which is why waiting for the zone to fully load before closing the game is a good habit.
+
+## Steam Cloud Sync and Cross-Device Progress
+
+Steam Cloud is the most reliable way to move your Breathedge 2 save file between a desktop and a **Steam Deck**, because the feature is enabled by default and requires no manual file copying. According to the Steam store configuration, the game supports **Steam Cloud**, **Family Sharing**, and full controller support, which means your progress should follow your Steam account as long as you let the sync finish before shutting down.
+
+However, Steam Cloud is not an infinite backup vault. It stores a snapshot of your local files, and if you play offline for a long stretch, the cloud copy becomes stale. When you reconnect, Steam will attempt to resolve conflicts by choosing the newer file, but that is not always the one you want. Manually backing up the local folder before switching machines adds a layer of safety that cloud sync alone does not guarantee.
+
+### Steam Cloud vs. Local Backup Comparison
+
+| Feature | Steam Cloud | Manual Local Backup |
+|---------|-------------|---------------------|
+| Automatic | Yes, after every session | No, you must copy files yourself |
+| Version history | Limited, single latest snapshot | Unlimited if you rename copies |
+| Offline access | No new uploads while offline | Works entirely offline |
+| Cross-device ease | Excellent on Steam Deck and PC | Requires external drive or network transfer |
+| Corruption recovery | Restores last synced version | Restores any point you manually saved |
+
+For most players, **Steam Cloud** alone is sufficient, but if you are about to test an experimental mod or edit configuration files, a manual copy of the **Breathedge 2 save location** takes less than a minute and prevents a bad overwrite from erasing a completed chapter. Players in the early access discussion threads have reported that manual backups are especially useful before entering the optional **junk-heavy derelict zones**, where physics interactions occasionally trigger unexpected crashes.
+
+### Disabling and Re-enabling Cloud Sync
+
+You can toggle **Steam Cloud** from the game properties menu in your Steam library. Right-click Breathedge 2, open **Properties**, and look for the **Updates** or **General** tab where the cloud checkbox appears. If you disable it temporarily to test a local mod, your next session will not upload progress until you re-enable the feature and launch the game once while online.
+
+## Manual Save File Backup and Restoration
+
+Backing up your Breathedge 2 save file manually is straightforward once you know the folder location. The process involves copying the entire **RedRuins Softworks** directory rather than individual files, because the game writes multiple metadata files that must stay in sync with each other. A partial copy can produce a corrupted state where your inventory loads but your quest flags do not.
+
+When you want to restore a backup, close the game completely, rename the current save folder to something like `Breathedge2_backup_current`, and then copy your saved folder back into the original location. Launch the game only after the folder is fully in place, because starting the executable while the directory is missing can trigger the creation of a fresh default profile that overwrites your cloud snapshot on the next sync.
+
+### Step-by-Step Manual Backup Process
+
+1. **Close Breathedge 2** and wait for the Steam client to show that the game is fully stopped.
+
+2. **Navigate to the save folder** using the path from the table above, depending on your OS.
+
+3. **Copy the entire RedRuins Softworks folder** to a different drive or a cloud storage folder outside Steam.
+
+4. **Rename the copied folder** with a date marker, such as `Breathedge2_save_2026-08-17`.
+
+5. **Launch the game again** to verify your current progress is still intact before making any changes.
+
+6. **Repeat the process** before major story decisions or after unlocking rare achievements.
+
+The **Steam achievements** themselves are tracked separately from the save file, so restoring an older save will not roll back achievement unlocks you already earned. That separation is convenient for achievement hunters who want to reload a checkpoint to try a different dialogue option without losing their **100% completion** progress on the platform.
+
+## How Language Settings Affect Save Files
+
+The **Breathedge 2 language settings** are stored in a configuration file that sits alongside your save data, not inside the save itself. This means switching the display language does not invalidate your progress, and you can change the **language support** option at any time without creating a new character or restarting the chapter. The early access build on Steam lists multiple subtitle and interface languages, which the store page breaks down in the language table on the right sidebar.
+
+Players who use **Steam Deck** frequently change the language setting through the game's own options menu rather than the Steam launch properties, because the in-game toggle updates the local config immediately while the Steam property change may require a full restart. Either method works, but the in-game approach keeps your current session intact and avoids an unnecessary autosave trigger.
+
+### Language Configuration Table
+
+| Setting | Location | Effect on Save |
+|---------|----------|----------------|
+| Interface language | In-game options menu | None, changes instantly |
+| Subtitle language | In-game audio/accessibility menu | None, separate from interface |
+| Audio language | Depends on installed voice packs | None, download may be required |
+| Steam launch language | Steam properties > Language tab | None, but requires restart |
+
+The **language support** in the early access build covers at least English and several other major languages, but the exact list may expand during the 16 to 20 month early access window. Since the language config is not part of the save file, you can safely experiment with different **Breathedge 2 language settings** without worrying about corrupting your progress.
+
+## Protecting Your Progress During Early Access
+
+Early access builds are inherently unstable, which means your Breathedge 2 save file is at slightly higher risk than it would be in a full release. The developers at **RedRuins Softworks** have committed to a 16 to 20 month early access period, during which patches may occasionally change quest structures, crafting recipes, or zone layouts in ways that affect existing saves. Keeping a manual backup before every major update is the cheapest insurance you can buy.
+
+The [Breathedge 2 beginner guide](/en/guides/breathedge-2-beginner-guide/) covers the early survival loop in detail, and one of its core recommendations is to avoid hoarding resources in a single ship container because zone transitions can occasionally misplace items. That same caution applies to your save strategy: do not rely on a single **Steam Cloud** snapshot when you are about to attempt a risky sequence of repairs or a long expedition into unexplored space.
+
+### Update Day Checklist
+
+- **Check the Steam news hub** for patch notes that mention save compatibility before launching the game.
+
+- **Back up your save folder manually** even if you have cloud sync enabled.
+
+- **Launch the game once** to allow the new build to migrate your save file to the current format.
+
+- **Verify your inventory and quest log** before continuing your session.
+
+- **Keep the previous backup** for at least a week in case a hotfix introduces a regression.
+
+Community reports from the first early access week suggest that most save issues are caused by quitting during a loading screen or by a **Steam Cloud** conflict after playing on two devices back to back. Neither scenario is catastrophic, but both are avoidable with a little patience and a manual backup habit.
+
+## Frequently Asked Questions
+
+**Where is the Breathedge 2 save file located on Windows?**
+
+On Windows, find your Breathedge 2 save file at `AppData\LocalLow\RedRuins Softworks\Breathedge 2\`. Back up the entire folder before risky chapter transitions, since Steam Cloud syncs the campaign slot and settings profile together — a partial copy can trigger save/load mismatch errors.
+
+**Does Breathedge 2 support Steam Cloud saves?**
+
+Yes, the official Steam store page confirms that **Steam Cloud** is enabled for Breathedge 2. Your save file syncs automatically when you close the game while connected to the internet, which lets you continue on a Steam Deck or another PC without manual transfers.
+
+**How do I manually save in Breathedge 2?**
+
+Breathedge 2 does not include a manual quick-save button. The game triggers **autosave checkpoints** when you complete objectives, enter new zones, finish dialogue, or craft major items. Wait for a zone to fully load before quitting to ensure the most recent autosave finished writing.
+
+**Can I change the language without losing my save?**
+
+Absolutely. The **Breathedge 2 language settings** are stored in a separate configuration file, not inside your save data. You can switch interface, subtitle, or audio language at any time from the in-game options menu without creating a new character or resetting your progress.
+
+**Do Steam achievements sync separately from saves?**
+
+Yes, Steam achievements are tracked separately from your Breathedge 2 save file. Restoring an older backup won’t remove achievements you already unlocked, so you can reload a checkpoint to retry story choices or survival routes without losing platform-level completion progress.

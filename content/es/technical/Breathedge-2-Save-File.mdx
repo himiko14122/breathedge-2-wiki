@@ -1,0 +1,153 @@
+export const metadata = {
+    id: "breathedge-2-save-file",
+    slug: "breathedge-2-save-file",
+    order: 6,
+    difficulty: "beginner",
+    title: "Archivo de guardado de Breathedge 2: Steam Cloud y ubicaciones de guardado",
+    description: "Localiza el archivo de guardado de Breathedge 2 y confía en las copias de seguridad de Steam Cloud. Te explicamos dónde viven las partidas guardadas, cómo funciona el autoguardado y cómo mantener tu progreso a salvo.",
+    keywords: ["archivo de guardado breathedge 2", "ubicación de guardado breathedge 2", "cómo guardar en breathedge 2", "breathedge 2 steam cloud", "logros de steam breathedge 2", "ajustes de idioma breathedge 2", "soporte de idiomas breathedge 2"],
+    image: "/images/technical/8r1Jdq870LA.webp",
+    video: "8r1Jdq870LA",
+    category: "technical",
+    date: "2026-08-17",
+    lastModified: "2026-08-17"
+}
+
+Perder una partida de 12 horas porque no pudiste averiguar dónde vive el archivo de guardado de Breathedge 2 es una forma singularmente frustrante de terminar una sesión de supervivencia espacial. La versión de acceso anticipado utiliza una combinación de guardados locales, **Steam Cloud** y autoguardados basados en puntos de control que no siempre resultan obvios durante tu primera órbita alrededor de los restos. Saber exactamente cómo se comporta el sistema significa que puedes hacer copias de seguridad manuales del progreso, transferir partidas entre máquinas o recuperarte tras un cierre inesperado sin tener que repetir todo el primer capítulo.
+
+## Cómo funcionan realmente los archivos de guardado de Breathedge 2
+
+Breathedge 2 no ofrece un botón de guardado rápido manual que puedas machacar antes de cada reparación arriesgada. En su lugar, el juego activa **puntos de control de autoguardado** cuando completas objetivos, entras en zonas nuevas o terminas secuencias de diálogo, lo que significa que tu progreso está vinculado a desencadenantes narrativos y ambientales en lugar de a un temporizador. La [página oficial de Breathedge 2 en Steam](https://store.steampowered.com/app/2412960/Breathedge_2/) confirma que **Steam Cloud** está habilitado para el título, por lo que tus archivos locales se sincronizan automáticamente cuando cierras el juego mientras estás conectado a internet.
+
+Debido a que la versión de acceso anticipado está estructurada en torno al primer capítulo principal de la historia y una gran área explorable, el sistema de guardado prioriza la **estabilidad sobre la granularidad**. No encontrarás un menú de ranuras de guardado en la pantalla principal, y el juego no te pide que pongas nombre a tu progreso. Esa decisión de diseño reduce la posibilidad de guardados manuales corruptos, pero también significa que debes comprender la estructura exacta de los archivos antes de intentar cualquier copia de seguridad o transferencia manual.
+
+### Dónde vive el directorio de guardado local
+
+La **ubicación de guardado de Breathedge 2** predeterminada depende de tu sistema operativo, pero los usuarios de Steam en Windows normalmente pueden encontrar sus datos en la siguiente ruta: `C:\Users\[TuNombreDeUsuario]\AppData\Local\Breathedge2\Saved\SaveGames`. Este directorio almacena tus ranuras de autoguardado, archivos de guardado manual y datos de puntos de control — lo que significa que si planeas hacer una copia de seguridad del progreso antes de una caminata espacial arriesgada o antes de toquetear los **ajustes de idioma**, copiar la carpeta completa `SaveGames` es la jugada más segura. Los jugadores que alternan entre la sincronización de Steam Cloud y las copias de seguridad locales suelen mantener una segunda copia aquí para evitar perder partidas sensibles al temporizador de oxígeno.
+
+| Plataforma | Ruta de guardado predeterminada | Sincronización en la nube |
+|----------|-------------------|------------|
+| Windows (Steam) | `C:\Users\[TuNombre]\AppData\LocalLow\RedRuins Softworks\Breathedge 2\` | Sí, mediante Steam Cloud |
+| Windows (Steam Play/Proton) | `~/.steam/steam/steamapps/compatdata/2412960/pfx/` | Sí, si Proton Cloud está activo |
+| Steam Deck | Misma ruta de Proton bajo compatdata 2412960 | Sí, mediante Steam Cloud |
+
+El nombre de la carpeta incluye al desarrollador **RedRuins Softworks**, por lo que es relativamente fácil de localizar dentro del directorio de persistencia estándar de Unity. Dentro de esa carpeta encontrarás archivos `.save` o `.dat` junto a un manifiesto que rastrea el progreso de tus **logros de Steam**, porque el juego los desbloquea localmente antes de sincronizarlos con los servidores de Valve.
+
+### Qué activa un autoguardado
+
+Comprender la cadencia del autoguardado te ayuda a evitar salir en un momento en el que tu último punto de control está más atrás de lo que esperas. Las pruebas de la comunidad en la versión de acceso anticipado sugieren que los siguientes desencadenantes son fiables en la mayoría de configuraciones de hardware: entrar en un módulo nuevo o atravesar una esclusa de aire fuerza de manera consistente una escritura en tu archivo de guardado, al igual que fabricar un objeto en un banco de trabajo o recoger un plano. Cabe destacar que el juego no autoguarda inmediatamente después de recolectar recursos básicos como metal o cable, por lo que los jugadores que pasan diez minutos aspirando escombros en el espacio abierto sin cruzar el límite de un módulo pueden perder todo ese progreso si salen al menú principal demasiado rápido — una frustración común en las primeras horas de una partida.
+
+- **Finalización de objetivos** después de entregar una misión principal de la historia o una tarea secundaria de un PNJ.
+
+- **Transiciones de zona** cuando viajas entre sectores espaciales importantes o entras en una superficie planetaria.
+
+- **Salidas de diálogo** después de terminar una conversación con un miembro de la tripulación o un personaje de la historia.
+
+- **Hitos de fabricación** cuando construyes una herramienta nueva, una mejora de traje o un componente de la nave.
+
+- **Muerte y reaparición** inmediatamente antes de que se aplique la penalización, para que no pierdas materiales dos veces.
+
+Estos desencadenantes significan que el juego actualiza constantemente tu archivo de guardado de Breathedge 2 en segundo plano, pero el momento exacto de la escritura no se muestra en pantalla. Si haces alt-tab y fuerzas el cierre durante una pantalla de carga, existe una pequeña posibilidad de que el autoguardado más reciente no se haya completado, por lo que esperar a que la zona cargue por completo antes de cerrar el juego es un buen hábito.
+
+## Sincronización de Steam Cloud y progreso entre dispositivos
+
+Steam Cloud es la forma más fiable de mover tu archivo de guardado de Breathedge 2 entre un ordenador de sobremesa y una **Steam Deck**, porque la función está habilitada de forma predeterminada y no requiere copiar archivos manualmente. Según la configuración de la tienda de Steam, el juego es compatible con **Steam Cloud**, **Family Sharing** y control total con mando, lo que significa que tu progreso debería seguir a tu cuenta de Steam siempre que dejes que la sincronización termine antes de apagar.
+
+Sin embargo, Steam Cloud no es una bóveda de copias de seguridad infinita. Almacena una instantánea de tus archivos locales, y si juegas sin conexión durante un período prolongado, la copia en la nube se queda obsoleta. Cuando te vuelvas a conectar, Steam intentará resolver los conflictos eligiendo el archivo más reciente, pero no siempre es el que tú quieres. Hacer una copia de seguridad manual de la carpeta local antes de cambiar de máquina añade una capa de seguridad que la sincronización en la nube por sí sola no garantiza.
+
+### Comparación entre Steam Cloud y copia de seguridad local
+
+| Característica | Steam Cloud | Copia de seguridad local manual |
+|---------|-------------|---------------------|
+| Automática | Sí, después de cada sesión | No, debes copiar los archivos tú mismo |
+| Historial de versiones | Limitado, una única instantánea más reciente | Ilimitado si renombras las copias |
+| Acceso sin conexión | No hay nuevas subidas sin conexión | Funciona completamente sin conexión |
+| Facilidad entre dispositivos | Excelente en Steam Deck y PC | Requiere unidad externa o transferencia por red |
+| Recuperación ante corrupción | Restaura la última versión sincronizada | Restaura cualquier punto que hayas guardado manualmente |
+
+Para la mayoría de los jugadores, **Steam Cloud** por sí solo es suficiente, pero si estás a punto de probar un mod experimental o editar archivos de configuración, una copia manual de la **ubicación de guardado de Breathedge 2** lleva menos de un minuto y evita que una sobrescritura incorrecta borre un capítulo completado. Los jugadores en los hilos de discusión del acceso anticipado han informado de que las copias de seguridad manuales son especialmente útiles antes de entrar en las **zonas abandonadas opcionales llenas de chatarra**, donde las interacciones físicas ocasionalmente provocan cierres inesperados.
+
+### Desactivar y reactivar la sincronización en la nube
+
+Puedes alternar **Steam Cloud** desde el menú de propiedades del juego en tu biblioteca de Steam. Haz clic derecho en Breathedge 2, abre **Propiedades** y busca la pestaña **Actualizaciones** o **General** donde aparece la casilla de la nube. Si la desactivas temporalmente para probar un mod local, tu próxima sesión no subirá el progreso hasta que vuelvas a habilitar la función y lances el juego una vez estando en línea.
+
+## Copia de seguridad y restauración manual de archivos de guardado
+
+Hacer una copia de seguridad de tu archivo de guardado de Breathedge 2 manualmente es sencillo una vez que conoces la ubicación de la carpeta. El proceso implica copiar el directorio completo de **RedRuins Softworks** en lugar de archivos individuales, porque el juego escribe múltiples archivos de metadatos que deben mantenerse sincronizados entre sí. Una copia parcial puede producir un estado corrupto en el que tu inventario carga pero tus indicadores de misión no lo hacen.
+
+Cuando quieras restaurar una copia de seguridad, cierra el juego por completo, renombra la carpeta de guardado actual a algo como `Breathedge2_backup_current` y luego copia tu carpeta guardada de vuelta a la ubicación original. Lanza el juego solo después de que la carpeta esté completamente en su lugar, porque iniciar el ejecutable mientras el directorio no existe puede provocar la creación de un perfil predeterminado nuevo que sobrescriba tu instantánea en la nube en la siguiente sincronización.
+
+### Proceso paso a paso de copia de seguridad manual
+
+1. **Cierra Breathedge 2** y espera a que el cliente de Steam muestre que el juego está completamente detenido.
+
+2. **Navega hasta la carpeta de guardado** usando la ruta de la tabla anterior, según tu sistema operativo.
+
+3. **Copia la carpeta completa de RedRuins Softworks** a una unidad diferente o a una carpeta de almacenamiento en la nube fuera de Steam.
+
+4. **Renombra la carpeta copiada** con un marcador de fecha, como `Breathedge2_save_2026-08-17`.
+
+5. **Lanza el juego de nuevo** para verificar que tu progreso actual sigue intacto antes de hacer cualquier cambio.
+
+6. **Repite el proceso** antes de decisiones importantes de la historia o después de desbloquear logros raros.
+
+Los **logros de Steam** en sí se rastrean por separado del archivo de guardado, por lo que restaurar un guardado más antiguo no revertirá los desbloqueos de logros que ya hayas conseguido. Esa separación es conveniente para los cazadores de logros que quieren recargar un punto de control para probar una opción de diálogo diferente sin perder su progreso de **finalización al 100%** en la plataforma.
+
+## Cómo afectan los ajustes de idioma a los archivos de guardado
+
+Los **ajustes de idioma de Breathedge 2** se almacenan en un archivo de configuración que se encuentra junto a tus datos de guardado, no dentro del guardado en sí. Esto significa que cambiar el idioma de visualización no invalida tu progreso, y puedes cambiar la opción de **soporte de idiomas** en cualquier momento sin crear un personaje nuevo ni reiniciar el capítulo. La versión de acceso anticipado en Steam incluye varios idiomas de subtítulos e interfaz, que la página de la tienda desglosa en la tabla de idiomas de la barra lateral derecha.
+
+Los jugadores que usan **Steam Deck** cambian con frecuencia el ajuste de idioma a través del menú de opciones del propio juego en lugar de las propiedades de lanzamiento de Steam, porque el conmutador del juego actualiza la configuración local de inmediato mientras que el cambio de propiedad de Steam puede requerir un reinicio completo. Ambos métodos funcionan, pero el enfoque dentro del juego mantiene intacta tu sesión actual y evita un desencadenante de autoguardado innecesario.
+
+### Tabla de configuración de idioma
+
+| Ajuste | Ubicación | Efecto en el guardado |
+|---------|----------|----------------|
+| Idioma de la interfaz | Menú de opciones del juego | Ninguno, cambia al instante |
+| Idioma de los subtítulos | Menú de audio/accesibilidad del juego | Ninguno, separado de la interfaz |
+| Idioma del audio | Depende de los paquetes de voz instalados | Ninguno, puede requerir descarga |
+| Idioma de lanzamiento de Steam | Propiedades de Steam > pestaña Idioma | Ninguno, pero requiere reinicio |
+
+El **soporte de idiomas** en la versión de acceso anticipado cubre al menos inglés y varios otros idiomas principales, pero la lista exacta puede ampliarse durante la ventana de acceso anticipado de 16 a 20 meses. Dado que la configuración de idioma no forma parte del archivo de guardado, puedes experimentar con seguridad con diferentes **ajustes de idioma de Breathedge 2** sin preocuparte por corromper tu progreso.
+
+## Protege tu progreso durante el acceso anticipado
+
+Las versiones de acceso anticipado son inherentemente inestables, lo que significa que tu archivo de guardado de Breathedge 2 corre un riesgo ligeramente mayor del que tendría en un lanzamiento completo. Los desarrolladores de **RedRuins Softworks** se han comprometido a un período de acceso anticipado de 16 a 20 meses, durante el cual los parches pueden cambiar ocasionalmente las estructuras de las misiones, las recetas de fabricación o los diseños de las zonas de maneras que afectan a los guardados existentes. Mantener una copia de seguridad manual antes de cada actualización importante es el seguro más barato que puedes comprar.
+
+La [guía para principiantes de Breathedge 2](/en/guides/breathedge-2-beginner-guide/) cubre en detalle el ciclo de supervivencia inicial, y una de sus recomendaciones principales es evitar acumular recursos en un único contenedor de la nave porque las transiciones de zona ocasionalmente pueden extraviar objetos. Esa misma precaución se aplica a tu estrategia de guardado: no confíes en una única instantánea de **Steam Cloud** cuando estés a punto de intentar una secuencia arriesgada de reparaciones o una expedición larga a espacio inexplorado.
+
+### Lista de verificación del día de actualización
+
+- **Revisa el centro de noticias de Steam** para ver las notas del parche que mencionen compatibilidad de guardados antes de lanzar el juego.
+
+- **Haz una copia de seguridad manual de tu carpeta de guardado** incluso si tienes la sincronización en la nube habilitada.
+
+- **Lanza el juego una vez** para permitir que la nueva versión migre tu archivo de guardado al formato actual.
+
+- **Verifica tu inventario y registro de misiones** antes de continuar tu sesión.
+
+- **Conserva la copia de seguridad anterior** durante al menos una semana en caso de que un parche urgente introduzca una regresión.
+
+Los informes de la comunidad de la primera semana de acceso anticipado sugieren que la mayoría de los problemas de guardado se deben a salir durante una pantalla de carga o a un conflicto de **Steam Cloud** después de jugar en dos dispositivos de forma consecutiva. Ninguno de los dos escenarios es catastrófico, pero ambos se pueden evitar con un poco de paciencia y el hábito de hacer copias de seguridad manuales.
+
+## Preguntas Frecuentes
+
+**¿Dónde se encuentra el archivo de guardado de Breathedge 2 en Windows?**
+
+En Windows, encuentra tu archivo de guardado de Breathedge 2 en `AppData\LocalLow\RedRuins Softworks\Breathedge 2\`. Haz una copia de seguridad de toda la carpeta antes de transiciones de capítulo arriesgadas, ya que Steam Cloud sincroniza la ranura de campaña y el perfil de ajustes juntos — una copia parcial puede provocar errores de desajuste al guardar/cargar.
+
+**¿Breathedge 2 admite guardados en Steam Cloud?**
+
+Sí, la página oficial de la tienda de Steam confirma que **Steam Cloud** está habilitado para Breathedge 2. Tu archivo de guardado se sincroniza automáticamente cuando cierras el juego mientras estás conectado a internet, lo que te permite continuar en una Steam Deck u otro PC sin transferencias manuales.
+
+**¿Cómo guardo manualmente en Breathedge 2?**
+
+Breathedge 2 no incluye un botón de guardado rápido manual. El juego activa **puntos de control de autoguardado** cuando completas objetivos, entras en zonas nuevas, terminas diálogos o fabricas objetos importantes. Espera a que una zona cargue por completo antes de salir para asegurarte de que el autoguardado más reciente terminó de escribirse.
+
+**¿Puedo cambiar el idioma sin perder mi guardado?**
+
+Por supuesto. Los **ajustes de idioma de Breathedge 2** se almacenan en un archivo de configuración separado, no dentro de tus datos de guardado. Puedes cambiar el idioma de la interfaz, los subtítulos o el audio en cualquier momento desde el menú de opciones del juego sin crear un personaje nuevo ni restablecer tu progreso.
+
+**¿Los logros de Steam se sincronizan por separado de los guardados?**
+
+Sí, los logros de Steam se rastrean por separado de tu archivo de guardado de Breathedge 2. Restaurar una copia de seguridad más antigua no eliminará los logros que ya hayas desbloqueado, por lo que puedes recargar un punto de control para reintentar decisiones de la historia o rutas de supervivencia sin perder el progreso de finalización a nivel de plataforma.

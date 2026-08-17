@@ -1,0 +1,21 @@
+{
+ "name": "Breathedge 2 Wiki",
+ "short_name": "Breathedge 2",
+ "description": "The complete Breathedge 2 wiki \u2014 beginner guides, gameplay tips, crafting, spaceships, crew, story and update news.",
+ "start_url": "/",
+ "display": "standalone",
+ "background_color": "#0a0f1e",
+ "theme_color": "#101a30",
+ "icons": [
+  {
+   "src": "/favicon-96x96.png",
+   "sizes": "96x96",
+   "type": "image/png"
+  },
+  {
+   "src": "/favicon.svg",
+   "sizes": "any",
+   "type": "image/svg+xml"
+  }
+ ]
+}
